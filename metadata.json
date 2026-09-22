@@ -1,0 +1,6 @@
+{
+  "name": "Pixelo APK Download",
+  "description": "Official APK download landing page for Pixelo. Fast, secure direct download for Android devices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

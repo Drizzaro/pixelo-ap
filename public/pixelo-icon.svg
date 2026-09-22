@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="iconRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3838" />
+      <stop offset="45%" stop-color="#E51E2B" />
+      <stop offset="100%" stop-color="#B80D18" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F9FAFB" />
+    </linearGradient>
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <filter id="iconShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#E51E2B" flood-opacity="0.3" />
+    </filter>
+    <filter id="boxShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Clean Base with gentle outline -->
+  <rect width="320" height="320" rx="72" fill="url(#bgGrad)" stroke="#F3F4F6" stroke-width="2" />
+
+  <!-- Centered P and Pixels -->
+  <g transform="translate(18, 12)" filter="url(#iconShadow)">
+    <!-- Main P Loop and Stem -->
+    <path d="M 125 45 
+             L 205 45 
+             C 248 45, 275 72, 275 115 
+             C 275 158, 248 185, 205 185 
+             L 165 185 
+             C 158 185, 152 191, 152 198 
+             L 152 230 
+             L 125 230 
+             L 125 45 Z" 
+          fill="url(#iconRedGrad)" />
+    
+    <!-- P Inner Loop White Cutout -->
+    <path d="M 152 85 
+             L 200 85 
+             C 220 85, 235 98, 235 115 
+             C 235 132, 220 145, 200 145 
+             L 152 145 Z" 
+          fill="#FFFFFF" />
+
+    <!-- Top-Left Red Pixel Tile -->
+    <rect x="70" y="80" width="46" height="46" rx="9" fill="url(#iconRedGrad)" filter="url(#boxShadow)" />
+    <rect x="72" y="82" width="42" height="20" rx="7" fill="url(#highlight)" />
+
+    <!-- Middle White Pixel Tile -->
+    <rect x="108" y="118" width="46" height="46" rx="9" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5" filter="url(#boxShadow)" />
+
+    <!-- Lower Red Pixel Tile -->
+    <rect x="120" y="178" width="48" height="48" rx="9" fill="url(#iconRedGrad)" filter="url(#boxShadow)" />
+    <rect x="122" y="180" width="44" height="22" rx="7" fill="url(#highlight)" />
+  </g>
+</svg>
